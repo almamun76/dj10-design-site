@@ -1,0 +1,64 @@
+{% extends 'common_code/base.html' %}
+{% load static %}
+{% block title %}blog{% endblock title %}
+
+
+
+{% block content %}
+    <!-- card start -->
+    <div class="container py-4 py-xl-5">
+        <div class="row">
+            <div class="col text-center">
+                <h2 class="mb-2"><u>Recent Blogs</u></h2>
+            </div>  
+        </div>
+        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+            <div class="col">
+                <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src={% static "images/a.jpg" %}>
+                    <div class="card-body p-4">
+                        <h4 class="card-title">Best Data Analysis Course</h4>
+                        <p class="card-text text-dark">In the rapidly evolving landscape of data-driven decision-making, being equipped with robust data analytics skills is crucial. The right course can provide you with the knowledge and expertise needed to thrive in this field. One such standout option in Bangladesh is the Junior Data Analyst Certification Program offered by us.</p>
+                        <div class="d-flex">
+                        <img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src={% static "images/x.jpg" %}>
+                            <div>
+                                <p class="fw-bold mb-0">Mr. X</p>
+                                <p class="text-muted mb-0">Course Instructor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src={% static "images/b.jpg" %}>
+                    <div class="card-body p-4">
+                        <h4 class="card-title">Data Engineering Course</h4>
+                        <p class="card-text text-dark">Data Engineering: Job Ready Program! This course covers a wide range of topics, from the fundamentals of data engineering to advanced concepts like optimization and cloud database management. It also includes practical modules like projects and assignments, which are crucial for hands-on learning.</p>
+                        <div class="d-flex">
+                        <img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src={% static "images/y.jpg" %}>
+                            <div>
+                                <p class="fw-bold mb-0">Mr. Y</p>
+                                <p class="text-muted mb-0">Course Instructor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src={% static "images/c.jpg" %}>
+                    <div class="card-body p-4">
+                        <h4 class="card-title">Problem Solving With Python</h4>
+                        <p class="card-text text-dark">Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.</p>
+                        <div class="d-flex">
+                        <img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src={% static "images/z.jpg" %}>
+                            <div>
+                                <p class="fw-bold mb-0">Mr. Z</p>
+                                <p class="text-muted mb-0">Course Instructor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- card end -->
+{% endblock content %}

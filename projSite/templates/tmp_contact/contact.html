@@ -1,0 +1,31 @@
+{% extends 'common_code/base.html' %}
+{% load static %}
+{% block title %}contact{% endblock title %}
+
+
+
+{% block content %}
+  <div class="container">
+    <h2 class="text-center my-2">
+        Contact Me
+    </h2>
+    {% comment %} in action="contactMe", "contactMe" must be same as path name declared in appPf>urls.py file {% endcomment %}
+    <form action="" >
+        <div class="mb-3">
+          <label for="guestName" class="form-label">Name</label>
+          <input type="text" name="guestName" class="form-control" id="guestName" placeholder="Enter your name">
+        </div>
+        <div class="mb-3">
+          <label for="guestEmail" class="form-label">Email</label>
+          <input type="email" name="guestEmail" class="form-control" id="guestEmail" placeholder="Enter your email">
+        </div>
+        <div class="mb-3">
+          <label for="guestQuery" class="form-label">Your Query</label>
+          <textarea class="form-control" name="guestQuery" id="guestQuery" rows="3"></textarea>
+        </div>
+        <div class="mb-3 d-flex justify-content-center">
+          <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </form>
+  </div>
+{% endblock content %}

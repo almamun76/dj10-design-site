@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+{% comment %} load static module (custom) {% endcomment %}
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <!-- CSS for image slider start -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- CSS for image slider end -->
+</head>
+
+<body>
+<!-- nav bar start -->
+    <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon">
+                
+                </span>
+                <span>
+                    MAMUN
+                </span>
+            </a>
+
+            <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5">
+                <span class="visually-hidden">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navcol-5">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="{% url 'homePage'%}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'blogPage'%}">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contactPage'%}">Contact</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">Live Courses</a>
+                        
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Data Analysis</a>
+                            <a class="dropdown-item" href="#">Deep Learning</a>
+                            <a class="dropdown-item" href="#">Machine Learning</a>
+                            <a class="dropdown-item" href="#">DJango</a>
+                        </div>
+                    </li>
+                </ul>
+                <a class="btn btn-primary ms-md-2" role="button" href="#">Enroll</a>
+            </div>
+        </div>
+    </nav>
+    <!-- nav bar end -->
+
+    <!-- carousel start -->
+    <section id="billboard" class="position-relative overflow-hidden bg-light-blue" style="height: 450px;">
+      <div class="swiper main-swiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide h-100">
+            <div class="container">
+              <div class="row d-flex align-items-center">
+                <div class="col-md-6">
+                  <div class="banner-content">
+                    <h1 class="display-2 text-uppercase text-dark pb-5">Learn AI & Data Science Smartly</h1>
+                    <a href="shop.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Free Courses</a>
+                  </div>
+                </div>
+                <div class="col-md-5 mt-5">
+                  <div class="image-holder d-flex align-items-center">
+                    <img class="img-fluid" src="{% static 'images/1.j' %}pg" alt="banner">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide h-100">
+            <div class="container">
+              <div class="row d-flex flex-wrap align-items-center">
+                <div class="col-md-6">
+                  <div class="banner-content">
+                    <h1 class="display-2 text-uppercase text-dark pb-5">Learn AI & Data Science Smartly</h1>
+                    <a href="shop.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Free Courses</a>
+                  </div>
+                </div>
+                <div class="col-md-5 mt-5">
+                  <div class="image-holder d-flex align-items-center">
+                    <img class="img-fluid" src="{% static 'images/2.j' %}pg" alt="banner">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="swiper-icon swiper-arrow swiper-arrow-prev">
+        <svg class="chevron-left">
+          <use xlink:href="#chevron-left" />
+        </svg>
+      </div>
+      <div class="swiper-icon swiper-arrow swiper-arrow-next">
+        <svg class="chevron-right">
+          <use xlink:href="#chevron-right" />
+        </svg>
+      </div>
+    </section>
+    <!-- carousel end -->
+    
+    {% block content %}
+    
+    {% endblock content %}
+     
+    <!-- footer start -->
+    <footer class="text-white bg-dark">
+        <div class="container py-4 py-lg-5">
+            <div class="row justify-content-center">
+                <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item">
+                    <h3 class="fs-6 text-white">Services</h3>
+                    <ul class="list-unstyled">
+                        <li><a class="link-light" href="#">Web design</a></li>
+                        <li><a class="link-light" href="#">Development</a></li>
+                        <li><a class="link-light" href="#">Hosting</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item">
+                    <h3 class="fs-6 text-white">About</h3>
+                    <ul class="list-unstyled">
+                        <li><a class="link-light" href="#">Company</a></li>
+                        <li><a class="link-light" href="#">Team</a></li>
+                        <li><a class="link-light" href="#">Legacy</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item">
+                    <h3 class="fs-6 text-white">Careers</h3>
+                    <ul class="list-unstyled">
+                        <li><a class="link-light" href="#">Job openings</a></li>
+                        <li><a class="link-light" href="#">Employee success</a></li>
+                        <li><a class="link-light" href="#">Benefits</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 text-center text-lg-start d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last item social">
+                    <div class="fw-bold d-flex align-items-center mb-2">
+                        <span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center bs-icon me-2">
+
+                        </span>
+                        <span>MAMUN</span>
+                    </div>
+                    <p class="text-muted copyright">Sem eleifend donec molestie, integer quisque orci aliquam.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between align-items-center pt-3">
+                <p class="mb-0">Copyright © 2023 Mamun</p>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item"></li>
+                    <li class="list-inline-item"></li>
+                    <li class="list-inline-item"></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+    <!-- JS code for image slider start -->
+    <script src="{% static 'js/jquery-1.11.0.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- <script type="text/javascript" src="js/bootstrap-is.bundle.min.js"></script> -->
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <!-- JS code for image slider end -->
+    <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>
